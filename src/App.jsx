@@ -10,7 +10,7 @@ function App() {
   return (
    <div className={classes.root}>
     <Navbar />
-    <About title="Acerca de mí" id = "About me" blue = {true}/>
+    <About title="Acerca de mí" id = "About me" blue = {true} />
     <Habilidades title="Manejo en Lenguajes" id = "Habilidades" blue = {false}/>
     <Trabajos title="Trabajos Realizados" id = "Trabajos" blue = {true}/>
     <Contact titles="Mis Contactos" id = "Contactos" blue = {false}/>

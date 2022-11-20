@@ -1,4 +1,4 @@
-import { AppBar, List, Toolbar} from '@material-ui/core';
+import { AppBar, List, makeStyles, Toolbar} from '@material-ui/core';
 import { BuildTwoTone, CallMissedSharp, EmojiObjects, InfoTwoTone } from '@material-ui/icons';
 import logo from "../img/hammer.png"
 import {Link, animateScroll as scroll} from "react-scroll";
@@ -12,22 +12,22 @@ const links = [
     {
         id: "About me",
         text: "Acerca de Mí",
-        icon: <InfoTwoToneToneIcon/>
+        icon: InfoTwoToneToneIcon
     },
     {
         id: "Habilidades",
         text: "Destrezas",
-        icon: <EmojiObjectsTwoToneIcon/>
+        icon: EmojiObjectsTwoToneIcon
     },
     {
         id: "Trabajos",
         text: "Mis proyectos",
-        icon: <BuildTwoToneIcon/>
+        icon: BuildTwoToneIcon
     },
     {
         id: "Contactos",
         text: "Mis Contactos",
-        icon: <ContactMailTwoToneIcon/>
+        icon: ContactMailTwoToneIcon
     },
     
 ]
@@ -35,13 +35,13 @@ const links = [
 const Navbar = () => {
     const classes = useStyles();
     return(
-        <Appbar position="sticky" className={classes.root}>
+        <AppBar position="sticky" className={classes.root}>
             <Toolbar className={classes.Toolbar} >
 
                 <img src={logo} className={classes.logo} alt = "logo"/>
                 <List className = {classes.menu}>
                     {
-                        links.map(({id, text, index})=>(
+                        links.map(({id, text}, index)=>(
                             <Link key={index} to={id} spy={true} smooth = {true} duration = {500} offset = {-70}>{text}</Link>
 
                         ))
@@ -49,7 +49,7 @@ const Navbar = () => {
                     }
                 </List>
             </Toolbar>
-        </Appbar>
+        </AppBar>
 
     )
 
