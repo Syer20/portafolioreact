@@ -1,8 +1,9 @@
 import { makeStyles } from '@material-ui/core';
 import react from 'react';
 
-const Contact = () => {
+const Contact = ({blue}) => {
     const classes = useStyles();
+    
     return(
 
         <div className = {`${classes.section} ${blue && classes.sectionblue}` }>

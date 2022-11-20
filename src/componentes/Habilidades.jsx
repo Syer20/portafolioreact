@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import react from 'react';
 
-const Habilidades = () => {
+const Habilidades = ({blue}) => {
     const classes = useStyles();
     return(
 
